@@ -19,7 +19,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one', function (req, res) {
-  res.send('Article one is requested will be served here');
+    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  
 });
 var pool = new Pool(config)
 app.get('/test-db',function(req,res){
