@@ -33,10 +33,10 @@ var articleOne = {
         var date=data.date;
         var heading = data.heading;
         var  content = data.content;
-    }
     
-    var htmlTemplate = `<html>
-    <head>
+    var htmlTemplate = `
+    <html>
+     <head>
         <title>
             ${title}
         </title>
