@@ -94,6 +94,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
   
 });
+var names= [];
+app.get('/submit-name',function(req,res){
+    var name = req.query.name;
+    names.push(name);
+    res.send(JSON.stringfy(names));
+})
+
+
  
 app.get('articles/:articleName',function(req, res){
     pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'",function(err,result)
