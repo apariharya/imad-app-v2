@@ -15,7 +15,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 var articles = {
- 'article-One' : { 
+ 'article-one' : { 
     title: 'Article one|Shubham Agnihotri',
     heading:'Artcle One',
     date:'Sep 25, 2016',
@@ -28,7 +28,7 @@ var articles = {
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`
 },
-'article-Two' :{ 
+'article-two' :{ 
     title: 'Article Two|Shubham Agnihotri',
     heading:'Artcle Two',
     
@@ -41,7 +41,7 @@ var articles = {
             <p>
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`},
-'article-Three' : { 
+'article-three' : { 
     title: 'Article Three|Shubham Agnihotri',
     heading:'Artcle Three',
     date:'Sep 7, 2016',
