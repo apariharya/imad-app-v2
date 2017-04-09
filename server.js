@@ -115,8 +115,8 @@ app.get('articles/:articleName',function(req, res){
                 res.send(createTemplate(articleData));
             }
         }
-    })
-    res.send(createTemplate(articleData));
+    });
+   
 });
 var pool = new Pool(config)
 app.get('/test-db',function(req,res){
