@@ -28,8 +28,10 @@ var articles = {
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`
 },
-'article-Two' :{ title: 'Article one|Shubham Agnihotri',
+'article-Two' :{ 
+    title: 'Article Two|Shubham Agnihotri',
     heading:'Artcle Two',
+    
     date:'Sep 15, 2016',
     content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>
@@ -39,7 +41,8 @@ var articles = {
             <p>
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`},
-'article-Three' : { title: 'Article one|Shubham Agnihotri',
+'article-Three' : { 
+    title: 'Article Three|Shubham Agnihotri',
     heading:'Artcle Three',
     date:'Sep 7, 2016',
     content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
