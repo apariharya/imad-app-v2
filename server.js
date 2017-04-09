@@ -15,7 +15,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var content = { 
+var articleOne = { 
     title: 'Article one|Shubham Agnihotri',
     heading:'Artcle One',
     date:'Sep 5, 2016',
@@ -29,6 +29,31 @@ var content = {
             </p>`
 };
     
+    var htmlTemplate = `<html>
+    <head>
+        <title>
+            Article one | SHubham Agnihotri
+        </title>
+        <meta name="viewport" content="width=device-width,intial-scale=1"/>
+       <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+    <div class ="container">
+        <div>
+            <a href='/'>Home</a>
+        </div>
+        <hr/>
+        <h3>Article One</h3>
+        <div>
+            sep 5, 2016
+        </div>
+        <div>
+            ${content}
+        </div>
+    </div>
+    </body>
+</html>
+`;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
