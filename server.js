@@ -94,12 +94,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
   
 });
-var counter = 0 ;
-
-app.get('/counter',function(req,res){
-    counter = counter + 1;
-    res.send(counter.toString());
-});
+ 
 app.get('articles/:articleName',function(req, res){
     pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'",function(err,result)
     {
@@ -112,7 +107,7 @@ app.get('articles/:articleName',function(req, res){
                 res.status(404).send('Article NOT FOUND');
             }else{
                 var articleData =result.rows[0];
-                res.send(createTemplate(articleData));
+                res.send(createTemplate( articleData));
             }
         }
     });
