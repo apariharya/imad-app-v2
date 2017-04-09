@@ -14,11 +14,11 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-
-var articleOne = { 
+var articles = {
+ article-One : { 
     title: 'Article one|Shubham Agnihotri',
     heading:'Artcle One',
-    date:'Sep 5, 2016',
+    date:'Sep 25, 2016',
     content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>
             <p>
@@ -27,7 +27,31 @@ var articleOne = {
             <p>
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`
-};
+},
+article-Two :{ title: 'Article one|Shubham Agnihotri',
+    heading:'Artcle Two',
+    date:'Sep 15, 2016',
+    content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>
+            <p>
+                This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>
+            <p>
+                This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>`},
+article-Three : { title: 'Article one|Shubham Agnihotri',
+    heading:'Artcle Three',
+    date:'Sep 7, 2016',
+    content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>
+            <p>
+                This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>
+            <p>
+                This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>`}
+
+}
     function createTemplate(data){
         var title =data.title;
         var date=data.date;
@@ -66,8 +90,9 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one', function (req, res) {
-    res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res) {
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articles[articleName]);
   
 });
 var pool = new Pool(config)
@@ -82,12 +107,7 @@ app.get('/test-db',function(req,res){
     });
     
 });
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
