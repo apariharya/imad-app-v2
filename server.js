@@ -28,6 +28,12 @@ var articleOne = {
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`
 };
+    function createTemplate(data){
+        var title =data.title;
+        var date=data.date;
+        var heading = data.heading;
+        var  content = data.content;
+    }
     
     var htmlTemplate = `<html>
     <head>
