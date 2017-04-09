@@ -32,7 +32,7 @@ var articleOne = {
     var htmlTemplate = `<html>
     <head>
         <title>
-            Article one | SHubham Agnihotri
+            ${title}
         </title>
         <meta name="viewport" content="width=device-width,intial-scale=1"/>
        <link href="/ui/style.css" rel="stylesheet" />
@@ -43,9 +43,9 @@ var articleOne = {
             <a href='/'>Home</a>
         </div>
         <hr/>
-        <h3>Article One</h3>
+        <h3>${heading}</h3>
         <div>
-            sep 5, 2016
+            ${date}
         </div>
         <div>
             ${content}
