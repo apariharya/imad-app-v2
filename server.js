@@ -28,7 +28,7 @@ app.get('/test-db',function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-        res.send(JSON.string(fy(result));
+        res.send(JSON.string(fy(result)));
         }
     });
     
