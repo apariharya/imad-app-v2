@@ -15,6 +15,21 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
+var content = { 
+    title: 'Article one|Shubham Agnihotri',
+    heading:'Artcle One',
+    date:'Sep 5, 2016',
+    content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>
+            <p>
+                This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>
+            <p>
+                This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
+            </p>`
+};
+    
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
