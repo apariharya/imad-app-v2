@@ -15,7 +15,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 var articles = {
- article-One : { 
+ 'article-One' : { 
     title: 'Article one|Shubham Agnihotri',
     heading:'Artcle One',
     date:'Sep 25, 2016',
@@ -28,7 +28,7 @@ var articles = {
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`
 },
-article-Two :{ title: 'Article one|Shubham Agnihotri',
+'article-Two' :{ title: 'Article one|Shubham Agnihotri',
     heading:'Artcle Two',
     date:'Sep 15, 2016',
     content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
@@ -39,7 +39,7 @@ article-Two :{ title: 'Article one|Shubham Agnihotri',
             <p>
                 This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
             </p>`},
-article-Three : { title: 'Article one|Shubham Agnihotri',
+'article-Three' : { title: 'Article one|Shubham Agnihotri',
     heading:'Artcle Three',
     date:'Sep 7, 2016',
     content :  `<p>This is Shubham Agnihotri this side.This is Shubham Agnihotri this side.
@@ -92,8 +92,7 @@ app.get('/', function (req, res) {
 });
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]);
-  
+    res.send(createTemplate(articles[articleName]));
 });
 var pool = new Pool(config)
 app.get('/test-db',function(req,res){
